@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "80273543552",
+    "project_id": "mpusling25",
+    "storage_bucket": "mpusling25.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:80273543552:android:892cdbce3f52a549ceb165",
+        "android_client_info": {
+          "package_name": "com.mpusling"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxtH3Exb1cRcbxs-_MfBrHXvJweJy3BwY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">M Pusling</string>
+    <string name="description_text">Perpustak Keliling\nSustainbility\nBukit Asam TBK</string>
+    <string name="text_login">Silahkan masukan email dan password yang sudah terdaftar di database Anda sebagai admin.</string>
+</resources>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Aktif -->
+    <item android:state_selected="true">
+        <shape android:shape="oval">
+            <size android:width="12dp" android:height="12dp" />
+            <solid android:color="#FF6200EE" />
+        </shape>
+    </item>
+    <!-- Tidak aktif -->
+    <item>
+        <shape android:shape="oval">
+            <size android:width="8dp" android:height="8dp" />
+            <solid android:color="#FFC4C4C4" />
+        </shape>
+    </item>
+</selector>

@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/bg"/>
+            <ImageView
+                android:layout_marginRight="10dp"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:padding="5dp"
+                android:src="@drawable/more"/>
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+        <LinearLayout
+            android:padding="20dp"
+            android:layout_below="@id/toolbar"
+            android:layout_margin="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/ll_border_black">
+
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/back_page"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:padding="10dp"
+                    android:src="@drawable/baseline_arrow_back_ios_24"/>
+                <TextView
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Tambah Data Buku"
+                    android:textSize="17sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+                <LinearLayout
+                    android:background="@drawable/ll_radius_green"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <ImageView
+                        android:id="@+id/img_save"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="10dp"
+                        android:src="@drawable/baseline_save_24"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_marginTop="5dp"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/black"/>
+
+            <LinearLayout
+                android:layout_marginTop="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Judul Buku"/>
+
+                <EditText
+                    android:inputType="text"
+                    android:id="@+id/input_judul_buku"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Masukan judul buku"
+                    android:padding="10dp"
+                    android:background="@drawable/input_edittext_2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Penulis"/>
+
+                <EditText
+                    android:id="@+id/input_nama_penulis"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Nama penulis"
+                    android:inputType="text"
+                    android:padding="10dp"
+                    android:background="@drawable/input_edittext_2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Penerbit"/>
+
+                <EditText
+                    android:id="@+id/input_nama_penerbit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Nama Penerbit"
+                    android:padding="10dp"
+                    android:inputType="text"
+                    android:background="@drawable/input_edittext_2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tahun Terbit"/>
+
+                <EditText
+                    android:id="@+id/input_tahun_terbit"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Tahun terbit"
+                    android:inputType="date|datetime"
+                    android:padding="10dp"
+                    android:drawableEnd="@drawable/baseline_calendar_today_24"
+                    android:background="@drawable/input_edittext_2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tahun Kedatangan"/>
+
+                <EditText
+                    android:id="@+id/input_tahun_kedatangan"
+                    android:inputType="datetime|date"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Tahun kedatangan"
+                    android:padding="10dp"
+                    android:drawableEnd="@drawable/baseline_calendar_today_24"
+                    android:background="@drawable/input_edittext_2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kode Buku"/>
+
+                <EditText
+                    android:id="@+id/input_kode_buku"
+                    android:inputType="number|text"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Kode buku"
+                    android:padding="10dp"
+                    android:background="@drawable/input_edittext_2"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kode Rak"/>
+
+                <EditText
+                    android:id="@+id/input_kode_rak"
+                    android:inputType="number|text"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:hint="Kode rak"
+                    android:padding="10dp"
+                    android:background="@drawable/input_edittext_2"/>
+
+            </LinearLayout>
+
+            <include
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/image_layout"/>
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
