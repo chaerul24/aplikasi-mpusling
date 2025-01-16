@@ -30,16 +30,6 @@
    - Menyimpan daftar buku favorit untuk dibaca di kemudian hari.
 3. **Notifikasi**
    - Mendapatkan notifikasi terkait pengembalian buku dan rekomendasi baru.
-
----
-
-## Teknologi yang Digunakan
-
-- **Frontend:** HTML, CSS (Bootstrap), JavaScript (jQuery)
-- **Backend:** PHP 8+ (CodeIgniter atau Laravel)
-- **Database:** MySQL
-- **Library Ikon:** Bootstrap Icons
-
 ---
 
 ## Instalasi
