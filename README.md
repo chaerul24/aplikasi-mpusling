@@ -71,16 +71,6 @@ mpusling/
 └── README.md              # Dokumentasi proyek
 ```
 
----
-
-## Tim Pengembang
-
-- **Nama Pengembang 1** - Backend Developer
-- **Nama Pengembang 2** - Frontend Developer
-- **Nama Pengembang 3** - Database Administrator
-
----
-
 ## Lisensi
 
 Aplikasi ini dirilis di bawah lisensi [MIT](https://opensource.org/licenses/MIT). Anda bebas menggunakan dan memodifikasi aplikasi ini dengan tetap menyertakan atribusi kepada pengembang asli.
