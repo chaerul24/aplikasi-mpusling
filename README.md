@@ -1,6 +1,6 @@
 # mPusling - Aplikasi Peminjaman Buku Online dan Perpustakaan Keliling
 
-**mPusling** adalah sebuah aplikasi berbasis web yang dirancang untuk mempermudah proses peminjaman buku secara online, khususnya untuk perpustakaan keliling. Aplikasi ini mendukung tiga jenis pengguna dengan peran berbeda: **Admin**, **Guru**, dan **Siswa**.
+**mPusling** adalah aplikasi berbasis Android yang dirancang untuk mempermudah proses peminjaman buku secara online, khususnya untuk mendukung operasional perpustakaan keliling. Aplikasi ini menggunakan **Android Studio (Java)** dengan integrasi **Firebase** untuk mendukung fitur autentikasi, penyimpanan data real-time, dan notifikasi.
 
 ---
 
@@ -9,57 +9,87 @@
 ### Untuk Admin:
 1. **Manajemen Buku**
    - Tambah, edit, dan hapus data buku.
-   - Upload cover buku dan deskripsi.
+   - Upload cover buku dan deskripsi ke Firebase Storage.
 2. **Manajemen Pengguna**
-   - Kelola data guru dan siswa yang terdaftar.
+   - Kelola data akun guru dan siswa melalui Firebase Authentication.
+   - Pantau aktivitas pengguna.
 3. **Laporan Peminjaman**
-   - Monitoring dan mencetak laporan peminjaman buku.
+   - Monitoring data peminjaman melalui Firebase Realtime Database.
+   - Unduh laporan dalam format PDF.
 
 ### Untuk Guru:
 1. **Peminjaman Buku**
-   - Pinjam buku secara online dari katalog yang tersedia.
+   - Cari dan pinjam buku secara online dari katalog Firebase.
 2. **Riwayat Peminjaman**
-   - Melihat riwayat peminjaman buku yang pernah dilakukan.
+   - Melihat daftar buku yang telah dipinjam sebelumnya.
 3. **Rekomendasi Buku**
-   - Memberikan rekomendasi buku kepada siswa.
+   - Mengajukan rekomendasi buku kepada siswa tertentu.
 
 ### Untuk Siswa:
 1. **Peminjaman Buku**
-   - Pinjam buku dengan mudah melalui aplikasi.
+   - Pinjam buku langsung melalui aplikasi.
 2. **Favoritkan Buku**
-   - Menyimpan daftar buku favorit untuk dibaca di kemudian hari.
+   - Menyimpan daftar buku favorit untuk referensi.
 3. **Notifikasi**
-   - Mendapatkan notifikasi terkait pengembalian buku dan rekomendasi baru.
+   - Menerima pemberitahuan tentang pengembalian buku, rekomendasi, dan promosi buku baru.
+
 ---
 
-## Instalasi
+## Teknologi yang Digunakan
 
-1. Clone repository ini:
+1. **Android Studio (Java):** Platform pengembangan aplikasi Android.
+2. **Firebase Authentication:** Untuk login dan pengelolaan akun pengguna.
+3. **Firebase Realtime Database:** Penyimpanan data buku, peminjaman, dan aktivitas pengguna.
+4. **Firebase Storage:** Penyimpanan file seperti cover buku.
+5. **Firebase Cloud Messaging:** Mengirim notifikasi ke pengguna.
 
+---
+
+## Instalasi dan Konfigurasi
+
+1. **Clone repository ini:**
    ```bash
    git clone https://github.com/username/mpusling.git
    ```
 
-2. Konfigurasi database:
-   - Impor file `mpusling.sql` ke MySQL.
-   - Edit file konfigurasi database di `config/database.php` (untuk CodeIgniter) atau `.env` (untuk Laravel).
+2. **Buka proyek di Android Studio:**
+   - Pastikan Anda memiliki versi terbaru Android Studio.
+   - Tambahkan file `google-services.json` yang diunduh dari Firebase Console ke direktori `app/`.
 
-3. Jalankan aplikasi:
-   - Untuk lokal: buka di browser dengan `http://localhost/mpusling`.
-   - Untuk hosting: upload ke server Anda dan sesuaikan konfigurasi.
+3. **Konfigurasi Firebase:**
+   - Buat proyek Firebase di [Firebase Console](https://console.firebase.google.com/).
+   - Aktifkan Firebase Authentication, Realtime Database, Storage, dan Cloud Messaging.
+
+4. **Jalankan aplikasi:**
+   - Hubungkan perangkat atau gunakan emulator.
+   - Klik **Run** di Android Studio.
 
 ---
 
-## Struktur Direktori
+## Struktur Proyek
 
 ```
-mpusling/
-├── app/                   # Folder aplikasi utama
-├── public/                # Folder untuk file yang diakses publik
-├── resources/             # Template dan view
-├── database/              # File migrasi database
+mpusling-android/
+├── app/                   # Folder kode aplikasi utama
+│   ├── src/               # Sumber kode
+│   │   ├── main/          # Kode utama aplikasi
+│   │   └── res/           # Sumber daya seperti layout XML
+├── google-services.json   # File konfigurasi Firebase
 └── README.md              # Dokumentasi proyek
 ```
+
+---
+
+## Screenshot
+
+1. **Halaman Login:**
+   - Autentikasi pengguna melalui email dan password.
+2. **Dashboard Admin:**
+   - Tampilan intuitif untuk mengelola buku dan pengguna.
+3. **Katalog Buku:**
+   - Daftar buku dengan opsi pencarian dan filter.
+
+---
 
 ## Lisensi
 
@@ -69,5 +99,8 @@ Aplikasi ini dirilis di bawah lisensi [MIT](https://opensource.org/licenses/MIT)
 
 ## Catatan Tambahan
 
-Jika Anda menemukan bug atau memiliki ide untuk pengembangan lebih lanjut, jangan ragu untuk membuat *issue* atau *pull request* di repository ini.
+- Jika Anda menemukan bug atau memiliki ide untuk pengembangan lebih lanjut, jangan ragu untuk membuat *issue* atau *pull request* di repository ini.
+- Dokumentasi lengkap tersedia di dalam repository.
+
+Selamat menggunakan aplikasi **mPusling** untuk mendukung kegiatan perpustakaan keliling Anda!
 
